@@ -6,7 +6,7 @@ export default function Header(){
             <div className={styles.headerLogo}></div>
             <nav className={styles.headerNav}>
                 <a href="">Home</a>
-                <a href="">Habilities</a>
+                <a href="">Skills</a>
                 <a href="">Projects</a>
                 <a href="">Contact</a>
             </nav>
