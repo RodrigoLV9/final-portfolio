@@ -1,0 +1,74 @@
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top:0;
+    z-index: -1;
+    background-color: black;
+    
+}
+/* COMPONENT: HeroInfo */
+.heroInfo{
+    margin:100px
+}
+.heroInfo__text{
+    width:300px;
+}
+.heroInfo__text h1{
+    padding: 5px 0;
+}
+.heroInfo__text p{
+    margin:15px 0
+}
+.heroInfo__links{
+    margin:20px 10px;
+    display: flex;
+    align-items: center;
+}
+.heroInfo__links a{
+    width:35px;
+    height:35px;
+    border-radius: 50%;
+    border:1px solid lightslategray;
+    margin:5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 1.2rem;
+}
+.heroInfo__button{
+    background-color: rgb(43, 167, 74);
+    width:150px;
+    height: 35px;
+    padding:5px;
+    border-radius: 20px;
+    border:none;
+    color:black;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    font-size: .8rem;
+    font-weight: bold;
+    transition: background-color .2s;
+}
+.heroInfo__button:hover{
+    background-color:rgb(0, 155, 39) ;
+}
+.heroInfo__button_icon{
+    font-size: 1.2rem;
+}
+/* COMPONENT: HeroImage */
+.containerImage{
+
+}
+.image{
+    width:300px;
+    height:300px;
+    border-radius: 50%;
+    background-color: red;
+}
