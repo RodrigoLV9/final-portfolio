@@ -1,0 +1,41 @@
+.skills{
+    text-align: center;
+    margin:auto;
+    width:100%
+}
+.skills h2{
+    margin:70px
+}
+
+/* COMPONENT: SkillsCards */
+.containerCards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+    flex-wrap: wrap;
+    width: 700px;
+    gap:20px
+}
+/* COMPONENT:Card */
+.card{
+    width:300px;
+    height: 300px;
+    background-color: rgba(0, 51, 128, 0.26);
+    padding:20px;
+    border-radius: 10px;
+}
+.card__items{
+    margin-top:20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:10px
+}
+.card_items_item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:5px
+}
