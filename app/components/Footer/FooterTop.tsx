@@ -1,15 +1,16 @@
 import { RiNextjsLine as NextIcon } from "react-icons/ri";
 import { FaReact as ReactIcon } from "react-icons/fa";
 import { FaCss3 as CssIcon } from "react-icons/fa";
+import styles from '../../styles/Footer.module.css'
 export default function FooterTop(){
     return(
-        <section className="footerTop">
-            <div className="left">
-                <div className="left__logo"></div>
+        <section className={styles.footerTop}>
+            <div className={styles.left}>
+                <div className={styles.left__logo}></div>
                 <p>Todo gran proyecto comienza con un sueño</p>
             </div>
-            <div className="right">
-                <div className="right__item">
+            <div className={styles.right}>
+                <div className={styles.right__item}>
                     <p>Navegacion</p>
                     <ul>
                         <li><a href="#">Home</a></li>
@@ -18,7 +19,7 @@ export default function FooterTop(){
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
-                <div className="right__item">
+                <div className={styles.right__item}>
                     <p>Redes Sociales</p>
                     <ul>
                         <li><a href="#">Instagram</a></li>
@@ -27,9 +28,9 @@ export default function FooterTop(){
                         <li><a href="#">Tiktok</a></li>
                     </ul>
                 </div>
-                <div className="right__item">
+                <div className={styles.right__item}>
                     <p>Creado con:</p>
-                    <ul>
+                    <ul className={styles.right__item_create}>
                         <li>
                             <NextIcon/>
                             <p>NextJS</p>
