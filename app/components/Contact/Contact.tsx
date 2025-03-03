@@ -1,11 +1,14 @@
 import Form from './Form'
 import ContactSide from './ContactSide'
+import styles from '../../styles/Contact.module.css'
 export default function Contact(){
     return(
-        <section className="contact">
+        <section className={styles.containerContact}>
             <h2>Contact</h2>
-            <Form/>
-            <ContactSide/>
+            <div className={styles.contact}>
+                <Form/>
+                <ContactSide/>
+            </div>
         </section>
     )
 }

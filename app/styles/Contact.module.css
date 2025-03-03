@@ -1,0 +1,118 @@
+.containerContact{
+    text-align: center;
+    margin:50px 0;
+}
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin:30px 0
+}
+/* COMPONENT: Form */
+.form{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    width: 400px;
+}
+.containerInputs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap:15px
+}
+.containerInputs2{
+    width: 100%;
+}
+.containerInputs2 input{
+    width: 100%;
+}
+.containerInputs2 textarea{
+    width: 100%;
+    height: 40px;
+    resize: none;
+    background-color: none;
+    border:1px solid gray;
+    outline: none;
+    padding:5px;
+    margin:15px 0;
+}
+.containerInput{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+.containerInput label{
+    padding: 10px;
+    position: absolute;
+    font-size: .9rem;
+    color:gray;
+    left:0;
+    
+}
+.containerInput input{
+    padding:10px;
+    margin:15px 0;
+    border-radius:5px;
+    height: 30px;
+    outline: none;
+    border:1px solid gray;
+    background-color: transparent;
+}
+.form__button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:10px;
+    width:150px;
+    height: 40px;
+    border-radius: 20px;
+    border:1px solid gray;
+    background-color: rgb(34, 151, 34);
+}
+/* COMPONENT: ContactSide */
+.contactSide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:20px
+}
+.contactSide__image{
+    width:250px;
+    height:250px;
+    border-radius:50%;
+    background-color: black;
+
+}
+.cardMessage{
+    width: 300px;
+    border-radius: 10px;
+    background-color: black;
+    border:1px solid grey;
+    padding:15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:20px
+}
+.cardMessage__button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    padding:10px;
+    width:230px;
+    background-color: rgb(39, 153, 39);
+    border:1px solid black;
+    border-radius: 20px;
+    font-size: 1rem;
+}
+.cardMessage__button svg{
+    font-size: 1.4rem;
+}
