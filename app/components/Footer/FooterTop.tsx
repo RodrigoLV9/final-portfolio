@@ -2,11 +2,18 @@ import { RiNextjsLine as NextIcon } from "react-icons/ri";
 import { FaReact as ReactIcon } from "react-icons/fa";
 import { FaCss3 as CssIcon } from "react-icons/fa";
 import styles from '../../styles/Footer.module.css'
+import Image from 'next/image'
 export default function FooterTop(){
     return(
         <section className={styles.footerTop}>
             <div className={styles.left}>
-                <div className={styles.left__logo}></div>
+                <Image
+                    className={styles.left__logo}
+                    src={'/logo-portfolio.png'}
+                    alt='logo'
+                    width={167}
+                    height={67}
+                />
                 <p>Todo gran proyecto comienza con un sueño</p>
             </div>
             <div className={styles.right}>

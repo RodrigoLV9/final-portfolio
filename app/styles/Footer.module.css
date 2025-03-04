@@ -14,12 +14,7 @@
     width:200px;
 }
 .left__logo{
-    width: 150px;
-    height: 40px;
-    background-color: lightskyblue;
-    border-radius:10px;
-    border:2px solid black;
-    margin:20px 0;
+    margin:10px 0;
 }
 .right{
     display: flex;

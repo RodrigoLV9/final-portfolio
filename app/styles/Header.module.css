@@ -7,13 +7,6 @@
     align-items: center;
     justify-content: space-between;
 }
-.headerLogo{
-    width:120px;
-    height: 40px;
-    border-radius:10px;
-    background-color: lightseagreen;
-    border:2px solid black
-}
 .headerNav{
     height: 100%;
     width:400px;
