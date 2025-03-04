@@ -55,13 +55,29 @@
     
 }
 .containerInput input{
-    padding:10px;
-    margin:15px 0;
+    padding:5px;
+    margin:15px 0 0 0;
     border-radius:5px;
-    height: 30px;
+    height: 35px;
     outline: none;
     border:1px solid gray;
     background-color: transparent;
+}
+.message_error, .message_correct{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:5px;
+    font-size: .8rem;
+}
+.message_error svg, .message_correct svg{
+    font-size: 1rem;
+}
+.message_error{
+    color:tomato
+}
+.message_correct{
+    color:limegreen
 }
 .form__button{
     display: flex;
@@ -71,6 +87,7 @@
     width:150px;
     height: 40px;
     border-radius: 20px;
+    margin:10px 0;
     border:1px solid gray;
     background-color: rgb(34, 151, 34);
 }
