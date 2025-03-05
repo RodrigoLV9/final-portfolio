@@ -8,8 +8,8 @@ export default function ContactSide(){
                 className={styles.contactSide__logo}
                 src={'/contact-image.png'}
                 alt='contact-image'
-                width={250}
-                height={250}
+                width={150}
+                height={150}
             />
             <div className={styles.cardMessage}>
                 <h4>Cotiza Rapido por WhatsApp</h4>

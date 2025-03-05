@@ -14,14 +14,18 @@
     align-items: start;
     justify-content: center;
     flex-direction: column;
-    width: 400px;
+    width: 500px;
 }
 .containerInputs{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    gap:15px
+    gap:15px;
+    width: 100%;
+}
+.containerInputs input{
+    width: 100%;
 }
 .containerInputs2{
     width: 100%;
@@ -31,13 +35,16 @@
 }
 .containerInputs2 textarea{
     width: 100%;
-    height: 40px;
+    height: 60px;
     resize: none;
     background-color: none;
-    border:1px solid gray;
+    border:1px solid grey;
     outline: none;
     padding:5px;
     margin:15px 0;
+    font-size: .9rem;
+    border-radius: 5px;
+    background-color: transparent;
 }
 .containerInput{
     display: flex;
@@ -45,22 +52,52 @@
     justify-content: center;
     position: relative;
     width: 100%;
+    margin-top: 20px;
 }
 .containerInput label{
     padding: 10px;
     position: absolute;
     font-size: .9rem;
+    background-color: #121212;
     color:gray;
     left:0;
-    
+    top:15px;
+    z-index: -1;
+    transition: all .3s;
+}
+input:-webkit-autofill {
+    background-color: #121212 !important;
+    -webkit-box-shadow: 0 0 0 1000px #121212 inset !important;
+    box-shadow: 0 0 0 1000px #121212 inset !important;
+    -webkit-text-fill-color: white !important; /* Ajusta según el color del texto */
+  }
+  
+.containerInput input:focus~label, .containerInput input:valid~label{
+    transform: translateY(-15px) scale(.8);
+    z-index: 3;
+    color:white;
+    padding:5px
+}
+.containerInput textarea:focus~label, .containerInput textarea:valid~label{
+    transform: translateY(-15px) scale(.8);
+    z-index: 3;
+    color:white;
+    padding:5px
+}
+.containerInput input:focus, .containerInput input:valid{
+    border:1px solid white
+}
+.containerInput textarea:focus, .containerInput textarea:valid{
+    border:1px solid white
 }
 .containerInput input{
-    padding:5px;
+    font-size: .9rem;
+    padding:5px 10px;
     margin:15px 0 0 0;
     border-radius:5px;
     height: 35px;
     outline: none;
-    border:1px solid gray;
+    border:1px solid grey;
     background-color: transparent;
 }
 .message_error, .message_correct{
@@ -83,6 +120,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap:10px;
+    font-size: 1rem;
+    color:black;
+    font-weight: bold;
     padding:10px;
     width:150px;
     height: 40px;
@@ -91,6 +132,8 @@
     border:1px solid gray;
     background-color: rgb(34, 151, 34);
 }
+
+
 /* COMPONENT: ContactSide */
 .contactSide{
     display: flex;

@@ -42,22 +42,22 @@ export default function Form() {
     <form action="" className={styles.form} onSubmit={handleSubmit(onSubmit)}>
       <div className={styles.containerInputs}>
         <div className={styles.containerInput}>
+          <input type="text" {...register('name')} required/>
           <label htmlFor="name">Name*</label>
-          <input type="text" {...register('name')} />
         </div>
         <div className={styles.containerInput}>
+          <input type='text' {...register('email')} required/>
           <label htmlFor="email">Email*</label>
-          <input type='email' {...register('email')} />
         </div>
       </div>
       <div className={styles.containerInputs2}>
         <div className={styles.containerInput}>
+          <input type="text" {...register('subject')} required/>
           <label htmlFor="subject">Subject*</label>
-          <input type="text" {...register('subject')} />
         </div>
         <div className={styles.containerInput}>
+          <textarea {...register('message')} required></textarea>
           <label htmlFor="message">Message*</label>
-          <textarea {...register('message')}></textarea>
         </div>
       </div>
       {
