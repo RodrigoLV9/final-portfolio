@@ -79,16 +79,20 @@ const dataEN={
     ],
     "tools": [
       {
-        "name": "photoshop",
-        "url": "https://skillicons.dev/icons?i=photoshop"
+        "name": "git",
+        "url": "https://skillicons.dev/icons?i=git"
       },
       {
         "name": "figma",
         "url": "https://skillicons.dev/icons?i=figma"
       },
       {
-        "name": "git",
-        "url": "https://skillicons.dev/icons?i=git"
+        "name": "linux",
+        "url": "https://skillicons.dev/icons?i=linux"
+      },
+      {
+        "name": "vscode",
+        "url": "https://skillicons.dev/icons?i=vscode"
       },
       {
         "name": "github",
@@ -99,21 +103,17 @@ const dataEN={
         "url": "https://skillicons.dev/icons?i=postman"
       },
       {
-        "name": "linux",
-        "url": "https://skillicons.dev/icons?i=linux"
+        "name": "photoshop",
+        "url": "https://skillicons.dev/icons?i=photoshop"
       },
-      {
-        "name": "vscode",
-        "url": "https://skillicons.dev/icons?i=vscode"
-      }
     ]
   }
 export default function SkillsCards(){
     return(
         <div className={styles.containerCards}>
-           <Card title='backend' data={dataEN.backend}/>
-           <Card title='Frontend' data={dataEN.frontend}/> 
-           <Card title='Tools' data={dataEN.tools}/>  
+          <Card title='Tools' data={dataEN.tools}/>
+          <Card title='Frontend' data={dataEN.frontend}/> 
+          <Card title='backend' data={dataEN.backend}/>
         </div>
     )
 }

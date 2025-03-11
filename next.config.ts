@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
         hostname: 'skillicons.dev',
         pathname: '/icons/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'i.ibb.co',
+        pathname: '/**',
+      },
     ],
     dangerouslyAllowSVG: true,
   },
