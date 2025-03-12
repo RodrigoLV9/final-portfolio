@@ -3,107 +3,107 @@ import styles from '../../styles/Skills.module.css'
 const dataEN={
     "frontend": [
       {
-        "name": "html",
+        "name": "HTML",
         "url": "https://skillicons.dev/icons?i=html"
       },
       {
-        "name": "css",
+        "name": "CSS",
         "url": "https://skillicons.dev/icons?i=css"
       },
       {
-        "name": "js",
+        "name": "Js",
         "url": "https://skillicons.dev/icons?i=js"
       },
       {
-        "name": "react",
+        "name": "React",
         "url": "https://skillicons.dev/icons?i=react"
       },
       {
-        "name": "next",
+        "name": "Next",
         "url": "https://skillicons.dev/icons?i=next"
       },
       {
-        "name": "sass",
+        "name": "Sass",
         "url": "https://skillicons.dev/icons?i=sass"
       },
       {
-        "name": "bootstrap",
+        "name": "Bootstrap",
         "url": "https://skillicons.dev/icons?i=bootstrap"
       },
       {
-        "name": "tailwind",
+        "name": "Tailwind",
         "url": "https://skillicons.dev/icons?i=tailwind"
       },
       {
-        "name": "threejs",
+        "name": "Threejs",
         "url": "https://skillicons.dev/icons?i=threejs"
       },
       {
-        "name": "ts",
+        "name": "Ts",
         "url": "https://skillicons.dev/icons?i=ts"
       },
       {
-        "name": "redux",
+        "name": "Redux",
         "url": "https://skillicons.dev/icons?i=redux"
       }
     ],
     "backend": [
       {
-        "name": "nodejs",
+        "name": "Nodejs",
         "url": "https://skillicons.dev/icons?i=nodejs"
       },
       {
-        "name": "express",
+        "name": "Express",
         "url": "https://skillicons.dev/icons?i=express"
       },
       {
-        "name": "postgresql",
+        "name": "Postgresql",
         "url": "https://skillicons.dev/icons?i=postgresql"
       },
       {
-        "name": "mysql",
+        "name": "MySql",
         "url": "https://skillicons.dev/icons?i=mysql"
       },
       {
-        "name": "sqlite",
+        "name": "Sqlite",
         "url": "https://skillicons.dev/icons?i=sqlite"
       },
       {
-        "name": "ts",
+        "name": "Ts",
         "url": "https://skillicons.dev/icons?i=ts"
       },
       {
-        "name": "mongodb",
+        "name": "Mongodb",
         "url": "https://skillicons.dev/icons?i=mongodb"
       }
     ],
     "tools": [
       {
-        "name": "git",
+        "name": "Git",
         "url": "https://skillicons.dev/icons?i=git"
       },
       {
-        "name": "figma",
+        "name": "Figma",
         "url": "https://skillicons.dev/icons?i=figma"
       },
       {
-        "name": "linux",
+        "name": "Linux",
         "url": "https://skillicons.dev/icons?i=linux"
       },
       {
-        "name": "vscode",
+        "name": "Vscode",
         "url": "https://skillicons.dev/icons?i=vscode"
       },
       {
-        "name": "github",
+        "name": "Github",
         "url": "https://skillicons.dev/icons?i=github"
       },
       {
-        "name": "postman",
+        "name": "Postman",
         "url": "https://skillicons.dev/icons?i=postman"
       },
       {
-        "name": "photoshop",
+        "name": "Photoshop",
         "url": "https://skillicons.dev/icons?i=photoshop"
       },
     ]
@@ -113,7 +113,7 @@ export default function SkillsCards(){
         <div className={styles.containerCards}>
           <Card title='Tools' data={dataEN.tools}/>
           <Card title='Frontend' data={dataEN.frontend}/> 
-          <Card title='backend' data={dataEN.backend}/>
+          <Card title='Backend' data={dataEN.backend}/>
         </div>
     )
 }

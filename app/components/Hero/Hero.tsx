@@ -3,7 +3,7 @@ import HeroImage from "./HeroImage"
 import styles from '../../styles/Hero.module.css'
 export default function Hero(){
     return(
-        <section className={styles.hero}>
+        <section className={styles.hero} id='home'>
             <HeroInfo/>
             <HeroImage/>
         </section>
