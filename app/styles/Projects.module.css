@@ -13,9 +13,10 @@
 /* COMPONENT: CardProject */
 .card{
     width:350px;
-    background-color: rgba(29, 13, 43, 0.295);
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.295);
     backdrop-filter: blur(10px);
-    border:1px solid gray;
+    border:1px solid lightblue;
     border-radius:5px;
     padding:15px;
 }
@@ -32,12 +33,12 @@
 .tags li{
     height: 25px;
     border-radius: 10px;
-    padding:5px;
-    border:1px solid gray;
-    background-color: rgb(15, 43, 51);
+    padding:7px;
+    border:1px solid lightseagreen;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgb(14, 8, 8);
     gap:5px;
     font-size: .8rem;
 }
@@ -66,7 +67,9 @@
     padding:10px;
     background-color: transparent;
     outline: none;
-    border:1px solid orange;
+    color:white;
+    text-decoration: none;
+    border:2px solid orange;
     border-radius: 25px;
     font-weight: bold;
     transition:background-color .3s, border .3s
@@ -75,6 +78,6 @@
     font-size: 1.2rem;
 }
 .button__demo:hover, .button__github:hover{
-    background-color: orange;
-    border:1px solid rgb(247, 247, 247)
+    background-color: orangered;
+    border:1px solid orangered
 }

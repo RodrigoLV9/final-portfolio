@@ -11,7 +11,6 @@ export default function Header(){
                 width={167}
                 height={67}
             />
-            {/* <div className={styles.headerLogo}></div> */}
             <nav className={styles.headerNav}>
                 <a href="#">Home</a>
                 <a href="#">Skills</a>
