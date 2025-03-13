@@ -14,7 +14,7 @@
     margin:100px
 }
 .heroInfo__text{
-    width:350px;
+    width:400px;
 }
 .heroInfo__text h1{
     font-family: "Inter", "sans serif";
@@ -28,6 +28,7 @@
     1px -1px 0 orangered;
 }
 .heroInfo__text p{
+    font-weight: 300;
     margin:15px 0;
     font-family: "Inter";
 }
@@ -49,12 +50,12 @@
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color:white;
     transition:font-size .2s
 }
 .heroInfo__links a:hover{
-    font-size: 1.3rem;
+    font-size: 1.4rem;
 }
 .heroInfo__button{
     background-color: rgb(43, 167, 74);
@@ -89,4 +90,27 @@
 }
 .hero__image:hover{
     filter:drop-shadow(1px 1px 5px rgba(0, 204, 255, 0.404));
+}
+.word_animation1{
+    animation: text_animation 2s ease-in-out forwards;
+}
+.word_animation2{
+    animation: text_animation 7s ease-in-out forwards;
+}
+.word_animation3{
+    animation: text_animation 11s ease-in-out forwards;
+}
+.word_animation4{
+    animation: text_animation 15s ease-in-out forwards;
+}
+@keyframes text_animation{
+    0%{
+        color:white
+    }
+    50%{
+        color:lightblue
+    }
+    100%{
+        color:lightseagreen
+    }
 }

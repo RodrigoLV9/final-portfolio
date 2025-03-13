@@ -11,7 +11,7 @@ export default function HeroInfo(){
                 <h2>Hey, i am</h2>
                 <h1>RODRIGO LV</h1>
                 <h3>Fullstack developer</h3>
-                <p>Desarrollador de software con más de 3 años de experiencia como freelancer en frontend y backend. Especializado en desarrollo frontend, creando interfaces modernas y eficientes. Desde Buenos Aires, Argentina.</p>
+                <p><span className={styles.word_animation1}>Desarrollador de software</span> con más de <span className={styles.word_animation2}>3 años de experiencia</span> como freelancer en <span className={styles.word_animation3}>frontend y backend</span>. Especializado en desarrollo frontend, creando interfaces modernas y eficientes. Desde <span className={styles.word_animation4}>Buenos Aires, Argentina.</span></p>
             </div>
             <div className={styles.heroInfo__links}>
                 <a href="#">

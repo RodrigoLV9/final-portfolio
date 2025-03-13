@@ -29,6 +29,7 @@
     justify-content: center;
     flex-wrap: wrap;
     gap:10px;
+    font-weight: normal;
 }
 .tags li{
     height: 25px;

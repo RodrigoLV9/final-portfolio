@@ -1,10 +1,11 @@
 .stats{
     height: 100px;
     background-color: black;
-    border:1px solid lightseagreen;
+    border-bottom:1px solid lightseagreen;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    border-radius: 0 0 50px 50px;
 }
 .statsCard{
     width:100px;

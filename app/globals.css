@@ -6,4 +6,6 @@
 html{
   color-scheme: light dark;
 }
-
+h2{
+  font-weight: 300;
+}

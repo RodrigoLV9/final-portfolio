@@ -58,6 +58,7 @@
     padding: 10px;
     position: absolute;
     font-size: .9rem;
+    font-weight: normal;
     background-color: #121212;
     color:gray;
     left:0;
@@ -129,10 +130,13 @@ input:-webkit-autofill {
     height: 40px;
     border-radius: 20px;
     margin:10px 0;
-    border:1px solid gray;
-    background-color: rgb(34, 151, 34);
+    border:none;
+    background-color: rgb(4, 138, 4);
+    transition: background-color .2s;
 }
-
+.form__button:hover{
+    background-color: rgb(7, 187, 7);
+}
 
 /* COMPONENT: ContactSide */
 .contactSide{
