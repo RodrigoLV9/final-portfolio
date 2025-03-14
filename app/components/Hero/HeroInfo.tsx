@@ -6,13 +6,18 @@ import { FaFacebookSquare as FacebookIcon } from "react-icons/fa";
 import { SiGmail as GmailIcon } from "react-icons/si";
 import { HiOutlineDownload as DownloadIcon } from "react-icons/hi";
 import styles from '../../styles/Hero.module.css'
-const words=['Fullstack developer', 'Software developer','Frontend developer','Freelancer','Backend Developer','Available to work']
+import { useLanguage } from '@/app/Contexts/LanguageContext';
+const wordsEN=['Fullstack developer', 'Software developer','Frontend developer','Freelancer','Backend Developer','Available to work']
+const wordsES = ['Desarrollador Fullstack', 'Desarrollador de software', 'Desarrollador frontend', 'Freelancer', 'Desarrollador backend', 'Disponible para trabajar'];
+
 export default function HeroInfo(){
-    const [text, setText] = useState("");
+  const {language}=useLanguage()
+  const [text, setText] = useState("");
   const [index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [charIndex, setCharIndex] = useState(0);
 
+  const words=language ? wordsES :wordsEN
   useEffect(() => {
     const currentWord = words[index] || "";
     const typingSpeed = isDeleting ? 50 : 100;
@@ -36,10 +41,15 @@ export default function HeroInfo(){
     return(
         <div className={styles.heroInfo}>
             <div className={styles.heroInfo__text}>
-                <h2>Hey, i am</h2>
+                <h2>{language ? 'Hola, yo soy' : 'Hi, i am'}</h2>
                 <h1>RODRIGO LV</h1>
                 <h3 className={styles.typing}>{text}</h3>
-                <p><span className={styles.word_animation1}>Desarrollador de software</span> con más de <span className={styles.word_animation2}>3 años de experiencia</span> como freelancer en <span className={styles.word_animation3}>frontend y backend</span>. Especializado en desarrollo frontend, creando interfaces modernas y eficientes. Desde <span className={styles.word_animation4}>Buenos Aires, Argentina.</span></p>
+                {
+                  language ? 
+                  <p><span className={styles.word_animation1}>Desarrollador de software</span> con más de <span className={styles.word_animation2}>3 años de experiencia</span> como freelancer en <span className={styles.word_animation3}>frontend y backend</span>. Especializado en desarrollo frontend, creando interfaces modernas y eficientes. Desde <span className={styles.word_animation4}>Buenos Aires, Argentina.</span></p>
+                  :
+                  <p><span className={styles.word_animation1}>Software developer</span> with more than <span className={styles.word_animation2}>3 years of experience</span> as a freelancer in <span className={styles.word_animation3}>frontend and backend</span>. Specialized in frontend development, creating modern and efficient interfaces. From <span className={styles.word_animation4}>Buenos Aires, Argentina.</span></p>
+                }
             </div>
             <div className={styles.heroInfo__links}>
                 <a href="#">
@@ -58,10 +68,19 @@ export default function HeroInfo(){
                     <GmailIcon/>
                 </a>
             </div>
-            <button type="button" className={styles.heroInfo__button}>
+            {
+              language ?
+              <a href='/CV-ES.pdf' download='CV-ES.pdf' className={styles.heroInfo__button}>
+                <DownloadIcon className={styles.heroInfo__button_icon}/>
+                <p>Descargar CV</p>
+              </a>
+              :
+              <a href='/CV-EN.pdf' download='CV-EN.pdf' className={styles.heroInfo__button}>
                 <DownloadIcon className={styles.heroInfo__button_icon}/>
                 <p>Download CV</p>
-            </button>
+              </a>
+            }
+            
         </div>
     )
 }

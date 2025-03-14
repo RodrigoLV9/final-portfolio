@@ -7,6 +7,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { SchemaContact } from '../../validations/SchemaContact'
 import { MdErrorOutline as ErrorIcon } from "react-icons/md";
 import { FaCheck as CorrectIcon } from "react-icons/fa";
+import { useLanguage } from '@/app/Contexts/LanguageContext';
 interface ErrorsValue {
   name: string | undefined,
   email: string | undefined,
@@ -15,10 +16,11 @@ interface ErrorsValue {
 }
 
 export default function Form() {
+  const {language}=useLanguage()
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState<ErrorsValue | undefined>(undefined);
   const { register, handleSubmit, formState: { errors } } = useForm({
-    resolver: zodResolver(SchemaContact)
+    resolver: zodResolver(SchemaContact(language))
   });
 
   useEffect(() => {
@@ -43,7 +45,7 @@ export default function Form() {
       <div className={styles.containerInputs}>
         <div className={styles.containerInput}>
           <input type="text" {...register('name')} required/>
-          <label htmlFor="name">Name*</label>
+          <label htmlFor="name">{language ? 'Nombre*' : '*Name'}</label>
         </div>
         <div className={styles.containerInput}>
           <input type='text' {...register('email')} required/>
@@ -53,11 +55,11 @@ export default function Form() {
       <div className={styles.containerInputs2}>
         <div className={styles.containerInput}>
           <input type="text" {...register('subject')} required/>
-          <label htmlFor="subject">Subject*</label>
+          <label htmlFor="subject">{language ? 'Asunto*' : 'Subject*'}</label>
         </div>
         <div className={styles.containerInput}>
           <textarea {...register('message')} required></textarea>
-          <label htmlFor="message">Message*</label>
+          <label htmlFor="message">{language ? 'Mensaje*':'Message*'}</label>
         </div>
       </div>
       {
@@ -75,7 +77,7 @@ export default function Form() {
         ) : null
       }
       <button className={styles.form__button}>
-        <p>Send</p>
+        <p>{language ? 'Enviar':'Send'}</p>
         <SendIcon />
       </button>
     </form>

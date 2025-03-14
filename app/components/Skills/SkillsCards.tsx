@@ -1,5 +1,7 @@
+"use client"
 import Card from './Card'
 import styles from '../../styles/Skills.module.css'
+import { useLanguage } from '@/app/Contexts/LanguageContext'
 const dataEN={
     "frontend": [
       {
@@ -109,9 +111,10 @@ const dataEN={
     ]
   }
 export default function SkillsCards(){
+  const {language}=useLanguage()
     return(
         <div className={styles.containerCards}>
-          <Card title='Tools' data={dataEN.tools}/>
+          <Card title={language ? 'Herramientas' : 'Tools'} data={dataEN.tools}/>
           <Card title='Frontend' data={dataEN.frontend}/> 
           <Card title='Backend' data={dataEN.backend}/>
         </div>

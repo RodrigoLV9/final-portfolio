@@ -1,9 +1,12 @@
+"use client"
 import { RiNextjsLine as NextIcon } from "react-icons/ri";
 import { FaReact as ReactIcon } from "react-icons/fa";
 import { FaCss3 as CssIcon } from "react-icons/fa";
 import styles from '../../styles/Footer.module.css'
 import Image from 'next/image'
+import { useLanguage } from "@/app/Contexts/LanguageContext";
 export default function FooterTop(){
+    const {language}=useLanguage()
     return(
         <section className={styles.footerTop}>
             <div className={styles.left}>
@@ -14,11 +17,11 @@ export default function FooterTop(){
                     width={167}
                     height={67}
                 />
-                <p>Todo gran proyecto comienza con un sueño</p>
+                <p>{language ? 'Todo gran proyecto comienza con un sueño':'Every great project begins with a dream'}</p>
             </div>
             <div className={styles.right}>
                 <div className={styles.right__item}>
-                    <p>Navegacion</p>
+                    <h4>{language ? 'Navegación':'Navegation'}</h4>
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#skills">Skills</a></li>
@@ -27,16 +30,17 @@ export default function FooterTop(){
                     </ul>
                 </div>
                 <div className={styles.right__item}>
-                    <p>Redes Sociales</p>
+                    <h4>{language ? 'Redes sociales':'Social networks'}</h4>
                     <ul>
+                        <li><a href="#">Github</a></li>
+                        <li><a href="#">Linkedin</a></li>
+                        <li><a href="#">Tiktok</a></li>
                         <li><a href="#">Instagram</a></li>
                         <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Github</a></li>
-                        <li><a href="#">Tiktok</a></li>
                     </ul>
                 </div>
                 <div className={styles.right__item}>
-                    <p>Creado con:</p>
+                    <h4>{language ? 'Creado con:' : 'Created with:'}</h4>
                     <ul className={styles.right__item_create}>
                         <li>
                             <NextIcon/>
