@@ -1,10 +1,13 @@
+"use client"
 import CardProject from './CardProject'
 import styles from '../../styles/Projects.module.css'
 import {projects} from '../../data/projects'
+import { useLanguage } from '@/app/Contexts/LanguageContext'
 export default function Projects(){
+    const {language}=useLanguage()
     return(
         <section className={styles.containerProjects} id='projects'>
-            <h2>Projects</h2>
+            <h2>{language ? 'Proyectos' : 'Projects'}</h2>
             <div className={styles.projects}>
                 {
                     projects.map((item,index)=>(

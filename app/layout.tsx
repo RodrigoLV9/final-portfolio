@@ -3,6 +3,7 @@ import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import React from "react";
 import Header from './components/Header/Header'
+import LanguageContext from "./Contexts/LanguageContext";
 const poppins = Poppins({
     subsets: ["latin"],
     weight: ["100"],
@@ -26,8 +27,10 @@ export default function RootLayout({children}:{children:React.ReactNode}){
         <link rel="shortcut icon" href="/logo-portfolio-mini.png" type="image/x-icon"/>
       </head>
       <body>
-        <Header/>
-        {children}
+        <LanguageContext>
+          <Header/>
+          {children}
+        </LanguageContext>
       </body>
     </html>
   );
