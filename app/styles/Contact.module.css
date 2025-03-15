@@ -159,7 +159,30 @@ input:-webkit-autofill {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap:20px
+    gap:20px;
+    text-align: start;
+}
+.cardMessage__title{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    background: linear-gradient(#09d84e, #0865bb);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color:transparent
+}
+.cardMessage__title svg{
+    font-size: 2.5rem;
+}
+.cardMessage__title svg path {
+    fill: url(#gradient);
+}
+  
+.cardMessage__title h2 {
+    background: linear-gradient(45deg, #25D366, #128C7E);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .cardMessage__button{
     display: flex;
@@ -172,6 +195,7 @@ input:-webkit-autofill {
     border:1px solid black;
     border-radius: 20px;
     font-size: 1rem;
+    color:black
 }
 .cardMessage__button svg{
     font-size: 1.4rem;
