@@ -1,5 +1,5 @@
 "use client"
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useForm } from "react-hook-form"
 import { BsFillSendFill as SendIcon } from "react-icons/bs";
 import styles from '../../styles/Contact.module.css'
@@ -16,6 +16,7 @@ interface ErrorsValue {
 }
 
 export default function Form() {
+  const formRef = useRef<HTMLFormElement>(null); 
   const {language}=useLanguage()
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState<ErrorsValue | undefined>(undefined);
@@ -38,10 +39,11 @@ export default function Form() {
 
   const onSubmit = () => {
     setIsSubmitted(true);
+    formRef.current?.submit();
   };
 
   return (
-    <form action="" className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+    <form action="https://formsubmit.co/rodrigolv.975@gmail.com" method="post"  className={styles.form} ref={formRef} onSubmit={handleSubmit(onSubmit)}>
       <div className={styles.containerInputs}>
         <div className={styles.containerInput}>
           <input type="text" {...register('name')} required/>
@@ -62,6 +64,8 @@ export default function Form() {
           <label htmlFor="message">{language ? 'Mensaje*':'Message*'}</label>
         </div>
       </div>
+      {/* <input type="hidden" name="_next" value="https://rodrigolv9.github.io/Portafolio/"/> */}
+      <input type="hidden" name="_captcha" value="false"></input>
       {
         error?.name || error?.email || error?.subject || error?.message ? (
           <div className={styles.message_error}>
@@ -76,7 +80,7 @@ export default function Form() {
           </div>
         ) : null
       }
-      <button className={styles.form__button}>
+      <button className={styles.form__button} type='submit' id='button'>
         <p>{language ? 'Enviar':'Send'}</p>
         <SendIcon />
       </button>
