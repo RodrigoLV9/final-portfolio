@@ -32,11 +32,10 @@ export default function FooterTop(){
                 <div className={styles.right__item}>
                     <h4>{language ? 'Redes sociales':'Social networks'}</h4>
                     <ul>
-                        <li><a href="#">Github</a></li>
-                        <li><a href="#">Linkedin</a></li>
-                        <li><a href="#">Tiktok</a></li>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">Facebook</a></li>
+                        <li><a href="https://github.com/RodrigoLV9" target='_blank'>Github</a></li>
+                        <li><a href="https://www.linkedin.com/in/rodrigo-villafuerte-482614355/" target='_blank'>Linkedin</a></li>
+                        <li><a href="https://www.instagram.com/rodrigolv099/" target='_blank'>Instagram</a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=100077749125227" target='_blank'>Facebook</a></li>
                     </ul>
                 </div>
                 <div className={styles.right__item}>

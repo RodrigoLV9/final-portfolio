@@ -52,19 +52,19 @@ export default function HeroInfo(){
                 }
             </div>
             <div className={styles.heroInfo__links}>
-                <a href="#">
+                <a href="https://www.linkedin.com/in/rodrigo-villafuerte-482614355/" target='_blank'>
                     <LinkedinIcon/>
                 </a>
-                <a href="#">
+                <a href="https://github.com/RodrigoLV9" target='_blank'>
                     <GithubIcon/>
                 </a>
-                <a href="#">
+                <a href="https://www.instagram.com/rodrigolv099/" target='_blank'>
                     <InstagramIcon/>
                 </a>
-                <a href="#">
+                <a href="https://www.facebook.com/profile.php?id=100077749125227" target='_blank'>
                     <FacebookIcon/>
                 </a>
-                <a href="#">
+                <a href="mailto:rodrigolv.975@gmail.com" target='_blank'>
                     <GmailIcon/>
                 </a>
             </div>
