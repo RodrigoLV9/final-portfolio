@@ -9,6 +9,43 @@
     position: fixed;
     z-index: 2;
 }
+.containerMenu{
+    width: 30px;
+    height: 25px;
+    background-color: rgba(0, 0, 255, 0.534);
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    display: none;
+}
+.menu{
+    width: 30px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: white;
+    position: relative;
+
+}
+.menu::before{
+    content: "";
+    display: block;
+    position: relative;
+    width:30px;
+    height: 3px;
+    border-radius: 2px;
+    transform: translateY(10px);
+    background-color: green;
+}
+.menu::after{
+    content: "";
+    display: block;
+    position: relative;
+    width:30px;
+    height: 3px;
+    border-radius: 2px;
+    transform: translateY(18px);
+    background-color: red;
+}
 .headerNav{
     height: 100%;
     width:400px;

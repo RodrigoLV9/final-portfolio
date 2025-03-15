@@ -1,7 +1,6 @@
 "use client"
 import Image from 'next/image';
-/* import {ChangeEvent} from 'react' */
-import { GoSun as SunIcon} from "react-icons/go";
+/* import { GoSun as SunIcon} from "react-icons/go"; */
 import styles from '../../styles/Header.module.css'
 import { useLanguage } from '@/app/Contexts/LanguageContext';
 export default function HeaderControls(){
@@ -11,9 +10,9 @@ export default function HeaderControls(){
     }
     return(
         <div className={styles.controls} >
-            <button className={styles.controls__button}>
+            {/* <button className={styles.controls__button}>
                 <SunIcon/>
-            </button>
+            </button> */}
             <button className={styles.controls__idiom} onClick={handleLanguage}>
                 {
                     language ? <Image src='/spanish.png' alt='spanish' width={40} height={25}/>
