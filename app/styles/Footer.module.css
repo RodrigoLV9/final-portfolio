@@ -9,19 +9,23 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     background-color: black;
-    height: 300px;
+    height:min-content;
+    padding:70px 0
 }
 .left{
     width:200px;
+
 }
 .left__logo{
-    margin:10px 0;
+    
 }
 .right{
     display: flex;
     align-items: start;
     justify-content: center;
+    flex-wrap: wrap;
     gap:70px
     
 }
@@ -58,4 +62,25 @@
     background-color: rgb(30, 69, 199);
     font-size: 1rem;
     font-weight: normal;
+}
+@media screen and (max-width: 768px){
+    .footerTop{
+        gap:50px;
+        padding:50px
+    }
+}
+@media screen and (max-width:480px) {
+    .footerTop{
+        padding:50px 20px
+    }
+    .right{
+        gap:30px
+    }
+    .right__item{
+        width: 200px;
+    }
+    .footerBottom{
+        padding:15px 0;
+        font-size: .8rem
+    }
 }
