@@ -12,7 +12,7 @@
 }
 /* COMPONENT: HeroInfo */
 .heroInfo{
-    margin:100px
+    margin:100px 30px
 }
 .heroInfo__text{
     width:400px;
@@ -122,12 +122,73 @@
     animation: blink 1s infinite;
     background:linear-gradient(45deg,orange, lightseagreen);
     background-clip: text;
-    
     -webkit-text-fill-color:transparent
-  }
+}
   
-  @keyframes blink {
+@keyframes blink {
     50% {
-      border-color: orange;
+        border-color: orange;
     }
-  }
+}
+
+@media screen and (max-width: 768px){
+    .hero{
+        height: 800px;
+        justify-content: space-around;
+    }
+    .heroInfo{
+        margin:80px 50px 50px 50px
+    }
+    .heroInfo__text{
+
+    }
+    .heroInfo__text h2{
+        font-size: 1.2rem;
+    }
+    .heroInfo__text h1{
+        font-size:2rem;
+    }
+    .heroInfo__text h3{
+        font-size: 1.4rem;
+    }
+    .heroInfo__text p{
+        font-size: .9rem;
+    }
+
+
+    
+}
+@media screen and (max-width:480px) {
+    .heroInfo{
+        margin: 70px 20px 20px 20px 
+    }
+    .heroInfo__text{
+        width:280px
+    }
+    .heroInfo__text h2{
+        font-size: 1.1rem;
+    }
+    .heroInfo__text h1{
+        font-size:1.7rem;
+    }
+    .heroInfo__text h3{
+        font-size: 1.2rem;
+    }
+    .heroInfo__text p{
+        font-size: .8rem;
+    }
+    .heroInfo__links a{
+        font-size: 1rem;
+        transition: font-size .3s
+    }
+    .heroInfo__links a:hover{
+        font-size: 1.2rem;
+    }
+    .heroInfo__button{
+        font-size: .7rem;
+        width:130px;
+        height: 30px;
+        padding:5px;
+        border-radius: 15px;
+    }
+}

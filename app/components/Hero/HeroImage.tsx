@@ -3,7 +3,7 @@ import Image from 'next/image'
 export default function HeroImage(){
     return(
         <div className={styles.hero__containerImage}>
-            <Image className={styles.hero__image} src='/programmer3.png' alt='programmer-image' width={300} height={300}/>
+            <Image className={styles.hero__image} src='/programmer3.png' alt='programmer-image' width={280} height={280}/>
         </div>
     )
 }
