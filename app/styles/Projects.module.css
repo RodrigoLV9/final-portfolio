@@ -20,9 +20,7 @@
     border-radius:5px;
     padding:15px;
 }
-.image{
 
-}
 .tags{
     display: flex;
     align-items: center;
@@ -70,7 +68,7 @@
     outline: none;
     color:white;
     text-decoration: none;
-    border:2px solid orange;
+    border:1px solid orange;
     border-radius: 25px;
     font-weight: bold;
     transition:background-color .5s ease-in-out, color .2s
@@ -81,4 +79,55 @@
 .button__demo:hover, .button__github:hover{
     background-color: orange;
     color:black
+}
+@media screen and (max-width: 768px){
+    .card{
+        width:300px;
+        height: 400px;
+        padding: 10px;
+    }
+    .button__demo, .button__github{
+        width:120px;
+        height: 40px;
+    }
+}
+@media screen and (max-width:480px) {
+    .card{
+        width:280px;
+        height: min-content;
+        padding: 20px 10px;
+    }
+    .image{
+        width: 220px;
+        height: 120px;
+    }
+    .button{
+        gap:5px;
+        border-radius: 5px;
+    }
+    .card > p{
+        font-size: .85rem;
+    }
+    .button a p{
+        font-size: .8rem;
+    }
+    .button__demo, .button__github{
+        gap:5px;
+        width:100px;
+        height: 35px;
+        padding:5px;
+        border:1px solid orange;
+        border-radius: 25px;
+    }
+    .button_icon{
+        font-size: 1rem;
+    }
+    .tags{
+        gap:5px;
+    }
+    .tags li{
+        height: 25px;
+        padding:5px;
+        font-size: .7rem;
+    }
 }
