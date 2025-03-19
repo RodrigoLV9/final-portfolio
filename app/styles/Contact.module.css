@@ -180,11 +180,26 @@ input:-webkit-autofill {
 .cardMessage__title svg path {
     fill: url(#gradient);
 }
-.cardMessage__title :global(input:-webkit-autofill) {
+:global(input:-webkit-autofill) {
+    background-color: #121212 !important;
+    -webkit-box-shadow: 0 0 0 1000px #121212 inset !important;
+}
+
+:global(.cardMessage__title input:-webkit-autofill) {
     background: linear-gradient(45deg, #25D366, #128C7E);
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+/* :global(input:-webkit-autofill) {
+    background-color: #121212 !important;
+    -webkit-box-shadow: 0 0 0 1000px #121212 inset !important;
+}
+.cardMessage__title :global(input:-webkit-autofill) {
+    background: linear-gradient(45deg, #25D366, #128C7E);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+} */
 /* .cardMessage__title h2 {
     background: linear-gradient(45deg, #25D366, #128C7E);
     background-clip: text;
