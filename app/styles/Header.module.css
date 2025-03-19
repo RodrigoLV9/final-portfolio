@@ -25,7 +25,7 @@
     outline:none
 }
 .menu{
-    width: 30px;
+    width: 25px;
     height: 3px;
     border-radius: 2px;
     background-color: white;
@@ -36,20 +36,20 @@
     content: "";
     display: block;
     position: relative;
-    width:30px;
+    width:25px;
     height: 3px;
     border-radius: 2px;
-    transform: translateY(-12px);
+    transform: translateY(-9px);
     background-color: white;
 }
 .menu::after{
     content: "";
     display: block;
     position: relative;
-    width:30px;
+    width:25px;
     height: 3px;
     border-radius: 2px;
-    transform: translateY(10px);
+    transform: translateY(7px);
     background-color: white;
 }
 .containerNav{
@@ -113,16 +113,7 @@
     visibility: hidden;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
-@media screen and (min-width: 769px) {
-    .headerNav {
-        transform: none;
-        opacity: 1;
-        visibility: visible;
-        position: relative;
-        width: 400px;
-        display: flex;
-    }
-}
+
 @media screen and (max-width: 768px){
     .headerNav{
         padding-top:60px;
@@ -144,8 +135,39 @@
         position:absolute;
         right:20px;
     }
-    
+}
+@media screen and (min-width: 769px) {
+    .headerNav {
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        position: relative;
+        width: 400px;
+        display: flex;
+    }
 }
 @media screen and (max-width:480px) {
-
+    .header{
+        padding: 0 10px;
+    }
+    .headerNav{
+        width: 200px;
+    }
+    .headerNav a{
+        font-size: .9rem;
+        height: 60px;
+    }
+    .headerLogo{
+        width: 130px;
+        height: 60px;
+    }
+    .controls__idiom img{
+        width:35px;
+        height:20px ;
+    }
+    .containerMenu{
+        display: block;
+        position:absolute;
+        right:10px;
+    }
 }
