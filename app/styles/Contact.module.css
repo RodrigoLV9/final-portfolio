@@ -180,12 +180,16 @@ input:-webkit-autofill {
 .cardMessage__title svg path {
     fill: url(#gradient);
 }
-  
-.cardMessage__title h2 {
+.cardMessage__title :global(input:-webkit-autofill) {
     background: linear-gradient(45deg, #25D366, #128C7E);
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+/* .cardMessage__title h2 {
+    background: linear-gradient(45deg, #25D366, #128C7E);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+} */
 .cardMessage__button{
     display: flex;
     align-items: center;
