@@ -27,8 +27,11 @@ export default function Header(){
                 <a href="#contact">{language ? 'Contacto' : 'Contact'}</a>
             </nav>
             <HeaderControls/>
-            <button className={`${styles.containerMenu} ${isMenu ? styles.menu_disabled : styles.menu_enabled}`} onClick={handleMenu}>
+            {/* <button className={`${styles.containerMenu} ${isMenu ? styles.menu_disabled : styles.menu_enabled}`} onClick={handleMenu}>
                 <div className={styles.menu}></div>
+            </button> */}
+            <button className={styles.containerMenu} onClick={handleMenu}>
+                <div className={`${styles.menu} ${isMenu ? styles.menu_open : ''}`}></div>
             </button>
         </header>
     )

@@ -22,7 +22,7 @@
     justify-content: center;
     display: none;
     border:none;
-    outline:none
+    outline:none;
 }
 .menu{
     width: 25px;
@@ -30,7 +30,7 @@
     border-radius: 2px;
     background-color: white;
     position: relative;
-
+    
 }
 .menu::before{
     content: "";
@@ -41,6 +41,7 @@
     border-radius: 2px;
     transform: translateY(-9px);
     background-color: white;
+    transition: transform .3s;
 }
 .menu::after{
     content: "";
@@ -51,6 +52,7 @@
     border-radius: 2px;
     transform: translateY(7px);
     background-color: white;
+    transition: transform .3s;
 }
 .containerNav{
     display: flex;
@@ -106,14 +108,30 @@
     visibility: visible;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
-
 .nav_disabled {
     transform: translateX(100%);
     opacity: 0;
     visibility: hidden;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
+.menu_open {
+    background: transparent;
+  }
+  
+  .menu_open::before {
+    transform: translateY(1px) rotate(45deg);
+  }
+  
+  .menu_open::after {
+    transform: translateY(-1px) rotate(-45deg);
+  }
 
+
+
+
+.menu_disabled{
+
+}
 @media screen and (max-width: 768px){
     .headerNav{
         padding-top:60px;
