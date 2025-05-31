@@ -12,7 +12,9 @@
 }
 /* COMPONENT: HeroInfo */
 .heroInfo{
-    margin:100px 30px
+    margin:100px 30px;
+    position: relative;
+    z-index:1;
 }
 .heroInfo__text{
     width:400px;
@@ -82,7 +84,8 @@
 }
 /* COMPONENT: HeroImage */
 .hero__containerImage{
-    
+    position:relative;
+    z-index: 1;
 }
 .hero__image{
     filter:drop-shadow(1px 1px 3px rgba(0, 204, 255, 0.404));
