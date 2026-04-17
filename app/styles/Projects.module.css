@@ -1,131 +1,305 @@
 .containerProjects{
+    width:min(1200px, calc(100% - 32px));
+    margin:180px auto 0;
+    padding: 28px 0 0;
     text-align: center;
-    margin-top:200px;
 }
+
+.header{
+    max-width: 760px;
+    margin: 0 auto 56px;
+}
+
+.header h2{
+    margin: 18px 0 14px;
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    line-height: 1.02;
+    color: #f8fafc;
+}
+
+.header p{
+    max-width: 640px;
+    margin: 0 auto 10px;
+    color: rgba(255, 255, 255, 0.76);
+    line-height: 1.7;
+}
+
 .projects{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap:25px;
-    margin:100px auto;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    align-items: stretch;
 }
+
 /* COMPONENT: CardProject */
 .card{
-    width:350px;
-    height: 400px;
-    background-color: rgba(0, 0, 0, 0.295);
-    backdrop-filter: blur(10px);
-    border:1px solid lightblue;
-    border-radius:5px;
-    padding:15px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    overflow: hidden;
+    background: #120b17;
+    border: 1px solid rgba(148, 163, 184, 0.3);
+    border-radius: 12px;
+    box-shadow: 0 18px 38px rgba(2, 6, 23, 0.35);
+    transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+
+.card:hover{
+    transform: translateY(-6px);
+    border-color: rgba(56, 189, 248, 0.58);
+    box-shadow: 0 24px 48px rgba(2, 6, 23, 0.5);
+}
+
+.media{
+    position: relative;
+    aspect-ratio: 16 / 9;
+    padding: 14px;
+    background: transparent;
+}
+
+.image{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 8px;
+}
+
+.typeBadge{
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 10px;
+    border-radius: 6px;
+    background: rgba(2, 6, 23, 0.86);
+    border: 1px solid rgba(251, 191, 36, 0.44);
+    color: #fef3c7;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.content{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 22px 22px 24px;
+    text-align: left;
+}
+
+.content h4{
+    font-size: clamp(1.2rem, 1.2vw, 1.4rem);
+    line-height: 1.25;
+    margin-bottom: 12px;
+    font-weight: 700;
+    color: #f8fafc;
+    text-shadow: 0 0 12px rgba(56, 189, 248, 0.14);
+}
+
+.description{
+    min-height: 112px;
+    margin-bottom: 18px;
+    color: rgba(241, 245, 249, 0.9);
+    font-size: 1rem;
+    line-height: 1.7;
 }
 
 .tags{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    gap:10px;
+    gap: 11px;
+    margin-bottom: 22px;
     font-weight: normal;
 }
+
 .tags li{
-    height: 25px;
-    border-radius: 10px;
-    padding:7px;
-    border:1px solid lightseagreen;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(14, 8, 8);
-    gap:5px;
-    font-size: .8rem;
+    gap: 6px;
+    min-height: 32px;
+    padding: 6px 10px;
+    border-radius: 15px;
+    border: 1px solid rgba(56, 189, 248, 0.42);
+    background: rgba(15, 23, 42, 0.9);
+    color: #e2e8f0;
+    font-size: .82rem;
+    font-weight: 600;
+    letter-spacing: .01em;
+    transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease, background-color .2s ease;
 }
-.card > h4{
-    margin:10px;
+
+.tags li:hover{
+    transform: translateY(-1px);
+    border-color: rgba(251, 191, 36, 0.7);
+    background: rgba(30, 41, 59, 1);
+    box-shadow: 0 6px 14px rgba(15, 23, 42, 0.38);
 }
-.card > p{
+
+.tags li svg{
     font-size: .9rem;
-    margin:10px 0;
-    text-align: start;
 }
+
+.tags li p{
+    margin: 0;
+}
+
 .button{
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap:10px;
-    border-radius: 5px;
+    justify-content: flex-start;
+    gap: 14px;
+    margin-top: auto;
 }
-.button__demo, .button__github{
-    display: flex;
+
+.button__demo,
+.button__github{
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap:10px;
-    width:120px;
-    height: 45px;
-    padding:10px;
-    background-color: transparent;
-    outline: none;
-    color:white;
+    gap: 9px;
+    min-width: 136px;
+    min-height: 46px;
+    padding: 11px 18px;
+    border-radius: 8px;
+    background: #0b1220;
+    color: #f8fafc;
     text-decoration: none;
-    border:1px solid orange;
-    border-radius: 25px;
-    font-weight: bold;
-    transition:background-color .5s ease-in-out, color .2s
+    border: 1px solid rgba(148, 163, 184, 0.34);
+    font-weight: 700;
+    font-size: .84rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    transition: transform .2s ease, background-color .2s ease, border-color .2s ease, color .2s ease;
 }
+
+.button__demo{
+    border-color: rgba(251, 191, 36, 0.65);
+    color: #fef08a;
+}
+
+.button__github{
+    border-color: rgba(56, 189, 248, 0.64);
+    color: #bae6fd;
+}
+
+.button__demo:hover,
+.button__github:hover{
+    transform: translateY(-2px);
+    background: #1e293b;
+    color: white;
+}
+
+.button__demo:hover{
+    border-color: rgba(251, 191, 36, 0.9);
+    box-shadow: 0 8px 18px rgba(251, 191, 36, 0.2);
+}
+
+.button__github:hover{
+    border-color: rgba(56, 189, 248, 0.9);
+    box-shadow: 0 8px 18px rgba(56, 189, 248, 0.22);
+}
+
 .button_icon{
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
-.button__demo:hover, .button__github:hover{
-    background-color: orange;
-    color:black
+
+.button a p{
+    margin: 0;
 }
+
 @media screen and (max-width: 768px){
-    .card{
-        width:300px;
-        height: 400px;
+    .containerProjects{
+        width: min(100% - 24px, 1200px);
+        margin-top: 140px;
+    }
+
+    .header{
+        margin-bottom: 36px;
+    }
+
+    .projects{
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    .content{
+        padding: 18px 16px 20px;
+    }
+
+    .media{
+        padding: 12px;
+    }
+
+    .description{
+        min-height: auto;
+        font-size: .95rem;
+    }
+
+    .button__demo,
+    .button__github{
+        min-width: 126px;
+        min-height: 42px;
+        font-size: .78rem;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .containerProjects{
+        width: calc(100% - 20px);
+        margin-top: 120px;
+    }
+
+    .header h2{
+        margin-top: 14px;
+    }
+
+    .header p{
+        font-size: .92rem;
+    }
+
+    .content h4{
+        font-size: 1.08rem;
+    }
+
+    .media{
         padding: 10px;
     }
-    .button__demo, .button__github{
-        width:120px;
-        height: 40px;
+
+    .description{
+        min-height: auto;
+        font-size: .9rem;
+        line-height: 1.6;
     }
-}
-@media screen and (max-width:480px) {
-    .card{
-        width:280px;
-        height: min-content;
-        padding: 20px 10px;
-    }
-    .image{
-        width: 220px;
-        height: 120px;
-    }
+
     .button{
-        gap:5px;
-        border-radius: 5px;
+        gap: 10px;
+        flex-wrap: wrap;
     }
-    .card > p{
-        font-size: .85rem;
+
+    .button__demo,
+    .button__github{
+        min-width: calc(50% - 5px);
+        min-height: 40px;
+        padding: 9px 10px;
+        font-size: .72rem;
     }
-    .button a p{
-        font-size: .8rem;
-    }
-    .button__demo, .button__github{
-        gap:5px;
-        width:100px;
-        height: 35px;
-        padding:5px;
-    }
-    .button_icon{
-        font-size: 1rem;
-    }
+
     .tags{
-        gap:5px;
+        gap: 8px;
     }
+
     .tags li{
-        height: 25px;
-        padding:5px;
-        font-size: .7rem;
+        min-height: 30px;
+        padding: 5px 10px;
+        font-size: .72rem;
     }
 }
