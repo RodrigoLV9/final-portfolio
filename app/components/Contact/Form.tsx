@@ -46,21 +46,21 @@ export default function Form() {
     <form action="https://formsubmit.co/rodrigolv.975@gmail.com" method="post"  className={styles.form} ref={formRef} onSubmit={handleSubmit(onSubmit)}>
       <div className={styles.containerInputs}>
         <div className={styles.containerInput}>
-          <input type="text" {...register('name')} required/>
-          <label htmlFor="name">{language ? 'Nombre*' : '*Name'}</label>
+          <input id="name" type="text" autoComplete="name" placeholder=" " {...register('name')} required/>
+          <label htmlFor="name">{language ? 'Nombre*' : 'Name*'}</label>
         </div>
         <div className={styles.containerInput}>
-          <input type='text' {...register('email')} required/>
+          <input id="email" type='email' autoComplete="email" placeholder=" " {...register('email')} required/>
           <label htmlFor="email">Email*</label>
         </div>
       </div>
       <div className={styles.containerInputs2}>
         <div className={styles.containerInput}>
-          <input type="text" {...register('subject')} required/>
+          <input id="subject" type="text" autoComplete="off" placeholder=" " {...register('subject')} required/>
           <label htmlFor="subject">{language ? 'Asunto*' : 'Subject*'}</label>
         </div>
         <div className={styles.containerInput}>
-          <textarea {...register('message')} required></textarea>
+          <textarea id="message" placeholder=" " {...register('message')} required></textarea>
           <label htmlFor="message">{language ? 'Mensaje*':'Message*'}</label>
         </div>
       </div>
