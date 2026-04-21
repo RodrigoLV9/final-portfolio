@@ -13,7 +13,7 @@ const dataEN={
         "url": "https://skillicons.dev/icons?i=css"
       },
       {
-        "name": "Js",
+        "name": "JavaScript",
         "url": "https://skillicons.dev/icons?i=js"
       },
       {
@@ -21,8 +21,8 @@ const dataEN={
         "url": "https://skillicons.dev/icons?i=react"
       },
       {
-        "name": "Next",
-        "url": "https://skillicons.dev/icons?i=next"
+        "name": "Next.js",
+        "url": "https://skillicons.dev/icons?i=nextjs"
       },
       {
         "name": "Sass",
@@ -37,21 +37,25 @@ const dataEN={
         "url": "https://skillicons.dev/icons?i=tailwind"
       },
       {
-        "name": "Threejs",
+        "name": "Three.js",
         "url": "https://skillicons.dev/icons?i=threejs"
       },
       {
-        "name": "Ts",
+        "name": "TypeScript",
         "url": "https://skillicons.dev/icons?i=ts"
       },
       {
         "name": "Redux",
         "url": "https://skillicons.dev/icons?i=redux"
+      },
+      {
+        "name": "Astro",
+        "url": "https://skillicons.dev/icons?i=astro"
       }
     ],
     "backend": [
       {
-        "name": "Nodejs",
+        "name": "Node.js",
         "url": "https://skillicons.dev/icons?i=nodejs"
       },
       {
@@ -59,24 +63,90 @@ const dataEN={
         "url": "https://skillicons.dev/icons?i=express"
       },
       {
-        "name": "Postgresql",
-        "url": "https://skillicons.dev/icons?i=postgresql"
+        "name": "Firebase",
+        "url": "https://skillicons.dev/icons?i=firebase"
       },
       {
-        "name": "MySql",
+        "name": "NestJS",
+        "url": "https://skillicons.dev/icons?i=nestjs"
+      },
+      {
+        "name": "Prisma",
+        "url": "https://skillicons.dev/icons?i=prisma"
+      },
+      {
+        "name": "C#"  ,
+        "url": "https://skillicons.dev/icons?i=cs"  
+      },
+      {
+        "name": ".NET",
+        "url": "https://skillicons.dev/icons?i=dotnet"
+      }
+    ],
+    "databases": [
+      {
+        "name": "PostgreSQL",
+        "url": "https://skillicons.dev/icons?i=postgres"
+      },
+      {
+        "name": "MySQL",
         "url": "https://skillicons.dev/icons?i=mysql"
       },
       {
-        "name": "Sqlite",
+        "name": "SQLite",
         "url": "https://skillicons.dev/icons?i=sqlite"
       },
       {
-        "name": "Ts",
-        "url": "https://skillicons.dev/icons?i=ts"
+        "name": "MongoDB",
+        "url": "https://skillicons.dev/icons?i=mongodb"
       },
       {
-        "name": "Mongodb",
-        "url": "https://skillicons.dev/icons?i=mongodb"
+        "name": "Redis",
+        "url": "https://skillicons.dev/icons?i=redis"
+      }
+    ],
+    "devops": [
+      {
+        "name": "Docker",
+        "url": "https://skillicons.dev/icons?i=docker"
+      },
+      {
+        "name": "Kubernetes",
+        "url": "https://skillicons.dev/icons?i=kubernetes"
+      },
+      {
+        "name": "GitHub Actions",
+        "url": "https://skillicons.dev/icons?i=githubactions"
+      },
+      {
+        "name": "Linux",
+        "url": "https://skillicons.dev/icons?i=linux"
+      }
+    ],
+    "qa": [
+      {
+        "name": "Jest",
+        "url": "https://skillicons.dev/icons?i=jest"
+      },
+      {
+        "name": "Vitest",
+        "url": "https://skillicons.dev/icons?i=vitest"
+      },
+      {
+        "name": "Cypress",
+        "url": "https://skillicons.dev/icons?i=cypress"
+      },
+      {
+        "name": "Selenium",
+        "url": "https://skillicons.dev/icons?i=selenium"
+      },
+      {
+        "name": "Postman",
+        "url": "https://skillicons.dev/icons?i=postman"
+      },
+      {
+        "name": "Gherkin",
+        "url": "https://skillicons.dev/icons?i=gherkin"
       }
     ],
     "tools": [
@@ -89,20 +159,20 @@ const dataEN={
         "url": "https://skillicons.dev/icons?i=figma"
       },
       {
-        "name": "Linux",
-        "url": "https://skillicons.dev/icons?i=linux"
+        "name": "npm",
+        "url": "https://skillicons.dev/icons?i=npm"
       },
       {
-        "name": "Vscode",
+        "name": "pnpm",
+        "url": "https://skillicons.dev/icons?i=pnpm"
+      },
+      {
+        "name": "VS Code",
         "url": "https://skillicons.dev/icons?i=vscode"
       },
       {
-        "name": "Github",
+        "name": "GitHub",
         "url": "https://skillicons.dev/icons?i=github"
-      },
-      {
-        "name": "Postman",
-        "url": "https://skillicons.dev/icons?i=postman"
       },
       {
         "name": "Photoshop",
@@ -114,9 +184,36 @@ export default function SkillsCards(){
   const {language}=useLanguage()
     return(
         <div className={styles.containerCards}>
-          <Card title={language ? 'Herramientas' : 'Tools'} data={dataEN.tools}/>
-          <Card title='Frontend' data={dataEN.frontend}/> 
-          <Card title='Backend' data={dataEN.backend}/>
+          <Card
+            title='Frontend'
+            subtitle={language ? 'Interfaces dinamicas, accesibles y con foco en UX.' : 'Dynamic, accessible interfaces focused on UX.'}
+            data={dataEN.frontend}
+          />
+          <Card
+            title={language ? 'Bases de Datos' : 'Databases'}
+            subtitle={language ? 'Persistencia relacional y no relacional para aplicaciones modernas.' : 'Relational and non-relational persistence for modern applications.'}
+            data={dataEN.databases}
+          />
+          <Card
+            title='Backend'
+            subtitle={language ? 'APIs robustas, servicios y arquitectura escalable.' : 'Robust APIs, services and scalable architecture.'}
+            data={dataEN.backend}
+          />
+          <Card
+            title='DevOps'
+            subtitle={language ? 'Contenedores, orquestacion y CI/CD para entregar software confiable.' : 'Containers, orchestration and CI/CD for reliable software delivery.'}
+            data={dataEN.devops}
+          />
+          <Card
+            title='QA'
+            subtitle={language ? 'Testing unitario, integracion y end-to-end para asegurar calidad.' : 'Unit, integration and end-to-end testing to ensure quality.'}
+            data={dataEN.qa}
+          />
+          <Card
+            title={language ? 'Herramientas' : 'Tools'}
+            subtitle={language ? 'Flujo de trabajo, colaboracion y productividad diaria.' : 'Daily workflow, collaboration and productivity toolkit.'}
+            data={dataEN.tools}
+          />
         </div>
     )
 }
