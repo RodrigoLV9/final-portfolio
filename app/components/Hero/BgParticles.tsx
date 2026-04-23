@@ -2,7 +2,6 @@
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import {
-  type Container,
   type ISourceOptions,
   MoveDirection,
   OutMode,
@@ -19,10 +18,6 @@ export const BgParticles = () => {
     });
   }, []);
 
-  const particlesLoaded = async (container?: Container): Promise<void> => {
-    console.log(container);
-  };
-
   const options: ISourceOptions = useMemo(
     () => ({
       background: {
@@ -34,8 +29,8 @@ export const BgParticles = () => {
       interactivity: {
         events: {
           onClick: {
-            enable: true,
-            mode: "push",
+            enable: false,
+            mode: "none",
           },
           onHover: {
             enable: true,
@@ -43,24 +38,21 @@ export const BgParticles = () => {
           },
         },
         modes: {
-          push: {
-            quantity: 4,
-          },
           repulse: {
-            distance: 200,
+            distance: 95,
             duration: 0.4,
           },
         },
       },
       particles: {
         color: {
-          value: "#ffffff",
+          value: ["#38bdf8", "#f59e0b", "#67e8f9"],
         },
         links: {
-          color: "#ffffff",
-          distance: 150,
+          color: "#67e8f9",
+          distance: 130,
           enable: true,
-          opacity: 0.1,
+          opacity: 0.12,
           width: 1,
         },
         move: {
@@ -70,23 +62,23 @@ export const BgParticles = () => {
             default: OutMode.out,
           },
           random: false,
-          speed: 6,
+          speed: 1.2,
           straight: false,
         },
         number: {
           density: {
             enable: true,
           },
-          value: 80,
+          value: 55,
         },
         opacity: {
-          value: 0.5,
+          value: { min: 0.1, max: 0.45 },
         },
         shape: {
           type: "circle",
         },
         size: {
-          value: { min: 1, max: 5 },
+          value: { min: 1, max: 3 },
         },
       },
       detectRetina: true,
@@ -103,7 +95,6 @@ export const BgParticles = () => {
         <div className='particlesWrapper'>
             <Particles
                 id="tsparticles"
-                particlesLoaded={particlesLoaded}
                 options={options}
                 className='particlesContainer'
             />

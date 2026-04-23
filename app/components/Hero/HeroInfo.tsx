@@ -18,6 +18,14 @@ export default function HeroInfo(){
   const [charIndex, setCharIndex] = useState(0);
 
   const words=language ? wordsES :wordsEN
+
+  useEffect(() => {
+    setText("");
+    setIndex(0);
+    setIsDeleting(false);
+    setCharIndex(0);
+  }, [language]);
+
   useEffect(() => {
     const currentWord = words[index] || "";
     const typingSpeed = isDeleting ? 50 : 100;
@@ -37,49 +45,56 @@ export default function HeroInfo(){
     }, typingSpeed);
 
     return () => clearTimeout(timeout);
-  }, [charIndex, isDeleting, index]);
+  }, [charIndex, isDeleting, index, words]);
     return(
         <div className={styles.heroInfo}>
+            <p className={styles.heroInfo__badge}>{language ? 'Disponible para nuevos proyectos' : 'Open for new projects'}</p>
             <div className={styles.heroInfo__text}>
-                <h2>{language ? 'Hola, yo soy' : 'Hi, i am'}</h2>
+                <h2>{language ? 'Hola, soy' : 'Hi, I am'}</h2>
                 <h1>RODRIGO LV</h1>
-                <h3 className={styles.typing}>{text}</h3>
+                <h3 className={styles.typing}><span>{text}</span></h3>
                 {
                   language ? 
-                  <p><span className={styles.word_animation1}>Desarrollador de software</span> con más de <span className={styles.word_animation2}>3 años de experiencia</span> como freelancer en <span className={styles.word_animation3}>frontend y backend</span>. Especializado en desarrollo frontend, creando interfaces modernas y eficientes. Desde <span className={styles.word_animation4}>Buenos Aires, Argentina.</span></p>
+                  <p><span className={styles.word_animation1}>Desarrollador de software</span> con más de <span className={styles.word_animation2}>3 años de experiencia</span> construyendo productos web en <span className={styles.word_animation3}>frontend y backend</span>. Enfoque fuerte en interfaces claras, rápidas y escalables. Desde <span className={styles.word_animation4}>Buenos Aires, Argentina.</span></p>
                   :
-                  <p><span className={styles.word_animation1}>Software developer</span> with more than <span className={styles.word_animation2}>3 years of experience</span> as a freelancer in <span className={styles.word_animation3}>frontend and backend</span>. Specialized in frontend development, creating modern and efficient interfaces. From <span className={styles.word_animation4}>Buenos Aires, Argentina.</span></p>
+                  <p><span className={styles.word_animation1}>Software developer</span> with more than <span className={styles.word_animation2}>3 years of experience</span> building web products across <span className={styles.word_animation3}>frontend and backend</span>. Strong focus on clear, fast and scalable interfaces. From <span className={styles.word_animation4}>Buenos Aires, Argentina.</span></p>
                 }
             </div>
             <div className={styles.heroInfo__links}>
-                <a href="https://www.linkedin.com/in/rodrigo-villafuerte-482614355/" target='_blank'>
+                <a href="https://www.linkedin.com/in/rodrigo-villafuerte-482614355/" target='_blank' rel='noopener noreferrer' aria-label='LinkedIn'>
                     <LinkedinIcon/>
                 </a>
-                <a href="https://github.com/RodrigoLV9" target='_blank'>
+                <a href="https://github.com/RodrigoLV9" target='_blank' rel='noopener noreferrer' aria-label='GitHub'>
                     <GithubIcon/>
                 </a>
-                <a href="https://www.instagram.com/rodrigolv099/" target='_blank'>
+                <a href="https://www.instagram.com/rodrigolv099/" target='_blank' rel='noopener noreferrer' aria-label='Instagram'>
                     <InstagramIcon/>
                 </a>
-                <a href="https://www.facebook.com/profile.php?id=100077749125227" target='_blank'>
+                <a href="https://www.facebook.com/profile.php?id=100077749125227" target='_blank' rel='noopener noreferrer' aria-label='Facebook'>
                     <FacebookIcon/>
                 </a>
-                <a href="mailto:rodrigolv.975@gmail.com" target='_blank'>
+                <a href="mailto:rodrigolv.975@gmail.com" target='_blank' rel='noopener noreferrer' aria-label='Gmail'>
                     <GmailIcon/>
                 </a>
             </div>
-            {
-              language ?
-              <a href='/CV-ES.pdf' download='CV-ES.pdf' className={styles.heroInfo__button}>
-                <DownloadIcon className={styles.heroInfo__button_icon}/>
-                <p>Descargar CV</p>
+            <div className={styles.heroInfo__actions}>
+              {
+                language ?
+                <a href='/CV-ES.pdf' download='CV-ES.pdf' className={styles.heroInfo__button}>
+                  <DownloadIcon className={styles.heroInfo__button_icon}/>
+                  <p>Descargar CV</p>
+                </a>
+                :
+                <a href='/CV-EN.pdf' download='CV-EN.pdf' className={styles.heroInfo__button}>
+                  <DownloadIcon className={styles.heroInfo__button_icon}/>
+                  <p>Download CV</p>
+                </a>
+              }
+
+              <a href='#contact' className={styles.heroInfo__buttonGhost}>
+                {language ? 'Contactame' : 'Contact me'}
               </a>
-              :
-              <a href='/CV-EN.pdf' download='CV-EN.pdf' className={styles.heroInfo__button}>
-                <DownloadIcon className={styles.heroInfo__button_icon}/>
-                <p>Download CV</p>
-              </a>
-            }
+            </div>
             
         </div>
     )

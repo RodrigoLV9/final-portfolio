@@ -5,9 +5,16 @@ import { BgParticles } from "./BgParticles"
 export default function Hero(){
     return(
         <section className={styles.hero} id='home'>
-            <HeroInfo/>
-            <HeroImage/>
+            <div className={styles.heroBackdrop} aria-hidden='true'>
+                <span className={`${styles.blob} ${styles.blobOne}`}></span>
+                <span className={`${styles.blob} ${styles.blobTwo}`}></span>
+                <span className={`${styles.blob} ${styles.blobThree}`}></span>
+            </div>
             <BgParticles/>
+            <div className={styles.heroLayout}>
+                <HeroInfo/>
+                <HeroImage/>
+            </div>
         </section>
     )
 }
