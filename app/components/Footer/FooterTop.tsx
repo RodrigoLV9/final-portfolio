@@ -7,55 +7,62 @@ import Image from 'next/image'
 import { useLanguage } from "@/app/Contexts/LanguageContext";
 export default function FooterTop(){
     const {language}=useLanguage()
+    const currentYear = new Date().getFullYear();
     return(
         <section className={styles.footerTop}>
-            <div className={styles.left}>
-                <Image
-                    className={styles.left__logo}
-                    src={'/logo-portfolio.png'}
-                    alt='logo'
-                    width={167}
-                    height={67}
-                />
-                <p>{language ? 'Todo gran proyecto comienza con un sueño':'Every great project begins with a dream'}</p>
+            <div className={styles.footerGrid}>
+                <div className={styles.brandBlock}>
+                    <Image
+                        className={styles.brandLogo}
+                        src={'/logo-portfolio.png'}
+                        alt='logo'
+                        width={167}
+                        height={67}
+                    />
+                    <p className={styles.brandText}>{language ? 'Todo gran proyecto comienza con un sueno.':'Every great project begins with a dream.'}</p>
+                </div>
+
+                <div className={styles.linksColumns}>
+                    <div className={styles.column}>
+                        <h4>{language ? 'Navegacion':'Navigation'}</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div className={styles.column}>
+                        <h4>{language ? 'Redes sociales':'Social networks'}</h4>
+                        <ul>
+                            <li><a href="https://github.com/RodrigoLV9" target='_blank' rel="noopener noreferrer">Github</a></li>
+                            <li><a href="https://www.linkedin.com/in/rodrigo-villafuerte-482614355/" target='_blank' rel="noopener noreferrer">LinkedIn</a></li>
+                            <li><a href="https://www.instagram.com/rodrigolv099/" target='_blank' rel="noopener noreferrer">Instagram</a></li>
+                            <li><a href="https://www.facebook.com/profile.php?id=100077749125227" target='_blank' rel="noopener noreferrer">Facebook</a></li>
+                        </ul>
+                    </div>
+
+                    <div className={styles.column}>
+                        <h4>{language ? 'Creado con':'Created with'}</h4>
+                        <ul className={styles.techList}>
+                            <li>
+                                <NextIcon/>
+                                <p>NextJS</p>
+                            </li>
+                            <li>
+                                <ReactIcon/>
+                                <p>React</p>
+                            </li>
+                            <li>
+                                <CssIcon/>
+                                <p>CSS Modules</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div className={styles.right}>
-                <div className={styles.right__item}>
-                    <h4>{language ? 'Navegación':'Navegation'}</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div className={styles.right__item}>
-                    <h4>{language ? 'Redes sociales':'Social networks'}</h4>
-                    <ul>
-                        <li><a href="https://github.com/RodrigoLV9" target='_blank'>Github</a></li>
-                        <li><a href="https://www.linkedin.com/in/rodrigo-villafuerte-482614355/" target='_blank'>Linkedin</a></li>
-                        <li><a href="https://www.instagram.com/rodrigolv099/" target='_blank'>Instagram</a></li>
-                        <li><a href="https://www.facebook.com/profile.php?id=100077749125227" target='_blank'>Facebook</a></li>
-                    </ul>
-                </div>
-                <div className={styles.right__item}>
-                    <h4>{language ? 'Creado con:' : 'Created with:'}</h4>
-                    <ul className={styles.right__item_create}>
-                        <li>
-                            <NextIcon/>
-                            <p>NextJS</p>
-                        </li>
-                        <li>
-                            <ReactIcon/>
-                            <p>React</p>
-                        </li>
-                        <li>
-                            <CssIcon/>
-                            <p>Css</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <p className={styles.footnote}>{language ? `Disponible para nuevos proyectos - ${currentYear}`:`Open for new projects - ${currentYear}`}</p>
         </section>
     )
 }
