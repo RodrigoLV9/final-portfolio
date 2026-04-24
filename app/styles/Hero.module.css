@@ -1,13 +1,3 @@
-:root {
-    --hero-bg-1: #030712;
-    --hero-bg-2: #030303;
-    --hero-text: #f8fafc;
-    --hero-muted: rgba(226, 232, 240, 0.8);
-    --hero-cyan: #38bdf8;
-    --hero-cyan-soft: #67e8f9;
-    --hero-amber: #f59e0b;
-}
-
 .hero {
     position: relative;
     width: 100%;
