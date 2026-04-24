@@ -6,6 +6,7 @@ import { useLanguage } from '@/app/Contexts/LanguageContext'
 export default function Projects(){
     const {language}=useLanguage()
     const projects=language ? projectsES : projectsEN
+    const sectionEyebrow = language ? 'Portafolio seleccionado' : 'Selected portfolio'
     const sectionTitle = language ? 'Trabajos recientes que mezclan producto, interfaz y lógica' : 'Recent work blending product thinking, interface, and logic'
     const sectionDescription = language
         ? 'Cada proyecto prioriza una experiencia clara, una identidad visual definida y una implementación cuidada.'
@@ -26,6 +27,7 @@ export default function Projects(){
     return(
         <section className={styles.containerProjects} id='projects'>
             <div className={styles.header}>
+                <span className={styles.headerBadge}>{sectionEyebrow}</span>
                 <h2>{language ? 'Proyectos' : 'Projects'}</h2>
                 <p>{sectionTitle}</p>
                 <p>{sectionDescription}</p>
