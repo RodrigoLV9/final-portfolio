@@ -1,6 +1,6 @@
 .containerProjects{
     width:min(1200px, calc(100% - 32px));
-    margin:180px auto 0;
+    margin:200px auto;
     padding: 28px 0 0;
     text-align: center;
 }
